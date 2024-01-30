@@ -9,7 +9,7 @@ def hello(name: str):
 
 
 @app.command()
-def goodbye(name: str = typer.Argument("typer"), formal: bool = False):
+def goodbye(name: str = typer.Argument("typer"), formal: bool = typer.Option(True)):
     if formal:
         print(f"Goodbye Ms. {name}. Have a good day.")
     else:
